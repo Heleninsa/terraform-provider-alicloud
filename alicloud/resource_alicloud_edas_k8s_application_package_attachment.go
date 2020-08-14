@@ -384,6 +384,7 @@ func resourceAlicloudEdasK8sApplicationPackageAttachmentRead(d *schema.ResourceD
 	request.RegionId = regionId
 	request.AppId = appId
 
+
 	raw, err := edasService.client.WithEdasClient(func(edasClient *edas.Client) (interface{}, error) {
 		return edasClient.QueryApplicationStatus(request)
 	})
