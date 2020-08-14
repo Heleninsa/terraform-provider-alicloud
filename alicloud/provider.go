@@ -553,6 +553,7 @@ func Provider() terraform.ResourceProvider {
 			"alicloud_oos_execution":                       resourceAlicloudOosExecution(),
 			"alicloud_resource_manager_policy_attachment":  resourceAlicloudResourceManagerPolicyAttachment(),
 			"alicloud_edas_k8s_application":                resourceAlicloudEdasK8sApplication(),
+			"alicloud_edas_k8s_application_deployment":     resourceAlicloudEdasK8sApplicationPackageAttachment(),
 		},
 
 		ConfigureFunc: providerConfigure,
