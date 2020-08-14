@@ -10,9 +10,9 @@ import (
 	"strings"
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/edas"
+	"github.com/aliyun/terraform-provider-alicloud/alicloud/connectivity"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
-	"github.com/aliyun/terraform-provider-alicloud/alicloud/connectivity"
 )
 
 func resourceAlicloudEdasK8sApplication() *schema.Resource {
@@ -458,7 +458,6 @@ func resourceAlicloudEdasK8sApplicationRead(d *schema.ResourceData, meta interfa
 		}
 		return WrapError(err)
 	}
-
 
 	d.Set("application_name", response.App.ApplicationName)
 	d.Set("cluster_id", response.App.ClusterId)
